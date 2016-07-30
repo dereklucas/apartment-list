@@ -1,0 +1,29 @@
+// Place all the styles related to the houses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.houses {
+  width: 100%;
+}
+
+.house {
+  .image {
+    width: 200px;
+
+    img {
+      max-width: 100%;
+    }
+
+    // &::after {
+    //   width: 50%;
+    //   height: 50%;
+    //   position: absolute;
+    //   top: 25%;
+    //   left: 25%;
+    // }
+
+    // &:hover::after {
+    //   content: attr(data-src url);
+    // }
+  }
+}

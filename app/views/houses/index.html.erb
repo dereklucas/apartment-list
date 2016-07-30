@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Houses</h1>
+
+<table class="houses">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Address</th>
+      <th>Price</th>
+      <th>Sqft</th>
+      <th>Lot</th>
+      <th>Pets</th>
+      <!-- <th>Description</th> -->
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @houses.each do |house| %>
+      <tr class="house">
+        <td class="image"><%= image_tag house.photo %></td>
+        <td class="address"><%= house.address %></td>
+        <td class="price"><%= house.price %></td>
+        <td class="sqft"><%= house.sqft %></td>
+        <td class="lot"><%= house.lot %></td>
+        <td class="pets"><%= house.pets %></td>
+        <!-- <td><%= house.description %></td> -->
+        <td><%= link_to 'Open', house.url, target: '_blank' %></td>
+        <td><%= link_to 'Hide', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New House', new_house_path %>
